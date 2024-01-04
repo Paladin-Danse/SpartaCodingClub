@@ -1,0 +1,14 @@
+D:\MyWork\C#\ConsoleApp_1\bin\Release\net8.0\ConsoleApp_1.exe
+D:\MyWork\C#\ConsoleApp_1\bin\Release\net8.0\ConsoleApp_1.deps.json
+D:\MyWork\C#\ConsoleApp_1\bin\Release\net8.0\ConsoleApp_1.runtimeconfig.json
+D:\MyWork\C#\ConsoleApp_1\bin\Release\net8.0\ConsoleApp_1.dll
+D:\MyWork\C#\ConsoleApp_1\bin\Release\net8.0\ConsoleApp_1.pdb
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.AssemblyInfoInputs.cache
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.AssemblyInfo.cs
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.dll
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\refint\ConsoleApp_1.dll
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.pdb
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ConsoleApp_1.genruntimeconfig.cache
+D:\MyWork\C#\ConsoleApp_1\obj\Release\net8.0\ref\ConsoleApp_1.dll

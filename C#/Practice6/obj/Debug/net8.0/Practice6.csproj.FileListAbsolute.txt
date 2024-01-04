@@ -1,0 +1,14 @@
+D:\MyWork\C#\Practice6\bin\Debug\net8.0\Practice6.exe
+D:\MyWork\C#\Practice6\bin\Debug\net8.0\Practice6.deps.json
+D:\MyWork\C#\Practice6\bin\Debug\net8.0\Practice6.runtimeconfig.json
+D:\MyWork\C#\Practice6\bin\Debug\net8.0\Practice6.dll
+D:\MyWork\C#\Practice6\bin\Debug\net8.0\Practice6.pdb
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.AssemblyInfoInputs.cache
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.AssemblyInfo.cs
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.dll
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\refint\Practice6.dll
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.pdb
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\Practice6.genruntimeconfig.cache
+D:\MyWork\C#\Practice6\obj\Debug\net8.0\ref\Practice6.dll

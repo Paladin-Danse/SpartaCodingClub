@@ -1,0 +1,14 @@
+D:\MyWork\C#\Practice7\bin\Debug\net8.0\Practice7.exe
+D:\MyWork\C#\Practice7\bin\Debug\net8.0\Practice7.deps.json
+D:\MyWork\C#\Practice7\bin\Debug\net8.0\Practice7.runtimeconfig.json
+D:\MyWork\C#\Practice7\bin\Debug\net8.0\Practice7.dll
+D:\MyWork\C#\Practice7\bin\Debug\net8.0\Practice7.pdb
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.AssemblyInfoInputs.cache
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.AssemblyInfo.cs
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.dll
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\refint\Practice7.dll
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.pdb
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\Practice7.genruntimeconfig.cache
+D:\MyWork\C#\Practice7\obj\Debug\net8.0\ref\Practice7.dll
