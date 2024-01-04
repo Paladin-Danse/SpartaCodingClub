@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -56,9 +57,9 @@ namespace TextRPG
                     break;
             }
 
-            Console.WriteLine($"- {(_isEquipMode ? _itemNum.ToString() : "")}{(isEquip ? "[E]" : "")}{name}  | {itemEffect} +{buffPoint} | {description}");
+            Console.WriteLine($"- {(_isEquipMode ? _itemNum.ToString() + " " : "")}{(isEquip ? "[E]" : "")}{name}  | {itemEffect} +{buffPoint} | {description}");
         }
-        public override void ShopItemInfo(bool _isBuyMode, int _itemNum)
+        public override void ShopItemInfo(bool _isBuyMode, int _itemNum, bool _isBuyed)
         {
             string itemEffect;
             switch (eItemEffect)
@@ -77,7 +78,7 @@ namespace TextRPG
                     break;
             }
 
-            Console.WriteLine($"- {(_isBuyMode ? _itemNum.ToString() : "")}{name}  | {itemEffect} +{buffPoint} | {description}      | {itemPrice}");
+            Console.WriteLine($"- {(_isBuyMode ? _itemNum.ToString() + " " : "")}{name}  | {itemEffect} +{buffPoint} | {description}      | {(_isBuyed ? "구매완료" : itemPrice)}");
         }
     }
     public struct Equipments

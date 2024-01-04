@@ -12,3 +12,12 @@ D:\MyWork\C#\TextRPG\obj\Debug\net8.0\refint\TextRPG.dll
 D:\MyWork\C#\TextRPG\obj\Debug\net8.0\TextRPG.pdb
 D:\MyWork\C#\TextRPG\obj\Debug\net8.0\TextRPG.genruntimeconfig.cache
 D:\MyWork\C#\TextRPG\obj\Debug\net8.0\ref\TextRPG.dll
+D:\MyWork\C#\TextRPG\obj\Debug\net8.0\TextRPG.sourcelink.json
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.AssemblyInfoInputs.cache
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.AssemblyInfo.cs
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.sourcelink.json
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.dll
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\refint\TextRPG.dll
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.pdb

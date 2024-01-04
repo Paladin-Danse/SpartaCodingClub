@@ -8,7 +8,7 @@
         CLASS_CRUSADER
     }
     
-    internal class Program
+    internal class GameManager
     {
         static bool isGameEnd = false;
         static Player player;
@@ -42,7 +42,7 @@
                         Inventory.Instance.InventoryOpen();
                         break;
                     case 3:
-                        
+                        equipmentShop.ShopOpen();
                         break;
                     default:
                         isGameEnd = true;
@@ -87,13 +87,15 @@
             }
 
             player = new Player(1, PlayerName, CLASS.CLASS_WARRIOR, 10, 5, 100);
-            Inventory.Instance.goldAccess = 1500;
-            equipmentShop.ShopReady("EquipmentShop");
+            Inventory.Instance.inventoryGold = 5000;
+            equipmentShop = new Shop("EquipmentShop");
 
+            //만약 인벤토리 내에 인스턴스가 된 아이템을 만들고 싶을 경우 아래처럼 new Item()형식으로 넣어주면 된다.
+            /*
             Inventory.Instance.GetItem(new Equipment(equipments.ironArmor));
             Inventory.Instance.GetItem(new Equipment(equipments.spartanSpear));
             Inventory.Instance.GetItem(new Equipment(equipments.oldSword));
-
+            */
             while (true)
             {
                 InitScene();

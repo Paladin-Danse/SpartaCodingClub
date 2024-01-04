@@ -68,7 +68,7 @@ namespace TextRPG
             Console.WriteLine($"공격력 : {currentAttackPoint} {(buffAttackPoint != 0 ? $"({(buffAttackPoint >= 0 ? "+" : "-")}"+buffAttackPoint+")" : "")}");
             Console.WriteLine($"방어력 : {currentDefencePoint} {(buffDefencePoint != 0 ? $"({(buffDefencePoint >= 0 ? "+" : "-")}" + buffDefencePoint + ")" : "")}");
             Console.WriteLine($"체 력 : {currentHealth} {(buffHealth != 0 ? $"({(buffHealth >= 0 ? "+" : "-")}" + buffHealth + ")" : "")}");
-            Console.WriteLine($"Gold : {Inventory.Instance.goldAccess} G\n");
+            Console.WriteLine($"Gold : {Inventory.Instance.inventoryGold} G\n");
         }
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWork\\C#\\TextRPG\\TextRPG.csproj",
+      "projectUniqueName": "D:\\MyWork\\C#\\TextRPG - 백업\\TextRPG.csproj",
       "projectName": "TextRPG",
-      "projectPath": "D:\\MyWork\\C#\\TextRPG\\TextRPG.csproj",
+      "projectPath": "D:\\MyWork\\C#\\TextRPG - 백업\\TextRPG.csproj",
       "packagesPath": "C:\\Users\\dltmd\\.nuget\\packages\\",
-      "outputPath": "D:\\MyWork\\C#\\TextRPG\\obj\\",
+      "outputPath": "D:\\MyWork\\C#\\TextRPG - 백업\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dltmd\\AppData\\Roaming\\NuGet\\NuGet.Config",
