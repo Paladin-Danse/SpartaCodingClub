@@ -104,6 +104,11 @@ namespace TextRPG
                             else
                                 GameManager.PlayerGetBuffed(equipment.getItemEffect, -equipment.getBuffPoint);
                         }
+                        else
+                        {
+                            Console.WriteLine("오류 : 장착하실 장비의 데이터를 찾지 못했습니다.");
+                            Console.ReadKey();
+                        }
                     }
                 }
             }
