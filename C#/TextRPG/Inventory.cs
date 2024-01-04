@@ -19,11 +19,12 @@ namespace TextRPG
         }
         //인벤토리 안의 아이템
         List<Item> items = new List<Item>();
+        public List<Item> getInventoryItem { get { return items; } }
         //장착관리 On/Off
         bool isEquipMode = false;
         //골드
         int gold;
-        public int goldAccess { get { return gold; } set { gold = value; } }
+        public int inventoryGold { get { return gold; } set { gold = value; } }
         public void InventoryOpen()
         {
             while (true)
@@ -49,6 +50,7 @@ namespace TextRPG
                         }
                     }
                     //장착관리 오프
+                    //장착을 하지않는 일반 아이템(포션, 열쇠, etc...)도 표시하기 위한 코드.
                     else
                     {
                         foreach (Item item in items)
@@ -68,7 +70,7 @@ namespace TextRPG
                     Console.Write("원하시는 행동을 입력해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > 1 || userChoice < 0))
                     {
-                        Program.ReadErrorMessage();
+                        GameManager.ReadErrorMessage();
                     }
                     else
                     {
@@ -85,7 +87,7 @@ namespace TextRPG
                     Console.Write("장착하실 장비를 입력해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > itemNum || userChoice < 0))
                     {
-                        Program.ReadErrorMessage();
+                        GameManager.ReadErrorMessage();
                     }
                     else
                     {
@@ -98,9 +100,9 @@ namespace TextRPG
                         {
                             equipment.onEquip = !equipment.onEquip;
                             if (equipment.onEquip)
-                                Program.PlayerGetBuffed(equipment.getItemEffect, equipment.getBuffPoint);
+                                GameManager.PlayerGetBuffed(equipment.getItemEffect, equipment.getBuffPoint);
                             else
-                                Program.PlayerGetBuffed(equipment.getItemEffect, -equipment.getBuffPoint);
+                                GameManager.PlayerGetBuffed(equipment.getItemEffect, -equipment.getBuffPoint);
                         }
                     }
                 }

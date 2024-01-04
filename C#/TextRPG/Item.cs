@@ -30,6 +30,7 @@ namespace TextRPG
         protected ITEM_EFFECT eItemEffect;
         protected string description;
         protected int itemPrice;
+        public int getPrice { get { return itemPrice; } }
         public Item()
         {
             name = "";
@@ -48,9 +49,10 @@ namespace TextRPG
         {
             if(!_isEquipMode) Console.WriteLine($"- {name}  | {description}");
         }
-        public virtual void ShopItemInfo(bool _isBuyMode, int _itemNum)
+        public virtual void ShopItemInfo(bool _isBuyMode, int _itemNum, bool _isBuyed)
         {
-            if (!_isBuyMode) Console.WriteLine($"- {name}  | {description}      | {itemPrice} G");
+            if (!_isBuyMode) Console.WriteLine($"- {name}  | {description}      | {(_isBuyed ? "구매완료" :itemPrice)} G");
+            else Console.WriteLine($"- {_itemNum} {name}  | {description}      | {(_isBuyed ? "구매완료" : itemPrice)} G");
         }
     }
 }
