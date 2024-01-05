@@ -28,7 +28,7 @@ namespace TextRPG
                 Console.WriteLine($"{Inventory.Instance.inventoryGold} G\n");
 
                 Console.WriteLine("[아이템 목록]");
-
+                //판매모드가 아니라면 상점 아이템을 전시. 판매모드라면 인벤토리 아이템을 전시.
                 if (isSellMode == false)
                 {
                     foreach (Item item in shopItems)
