@@ -25,7 +25,7 @@ namespace TextRPG
         int defaultHealth;
         public int buffHealth;
         int currentHealth { get { return defaultHealth + buffHealth; } }
-        
+
         public Player(int _level, string _name, CLASS _class, int _attackPoint, int _defencePoint, int _health)
         {
             level = _level;
@@ -65,9 +65,9 @@ namespace TextRPG
                     break;
             }
             //버프된 능력치는 0이 아닐 때 뒤에 (+n) 형식으로 표기됨. 0이라면 표시되지 않음.
-            Console.WriteLine($"공격력 : {currentAttackPoint} {(buffAttackPoint != 0 ? $"({(buffAttackPoint >= 0 ? "+" : "-")}"+buffAttackPoint+")" : "")}");
-            Console.WriteLine($"방어력 : {currentDefencePoint} {(buffDefencePoint != 0 ? $"({(buffDefencePoint >= 0 ? "+" : "-")}" + buffDefencePoint + ")" : "")}");
-            Console.WriteLine($"체 력 : {currentHealth} {(buffHealth != 0 ? $"({(buffHealth >= 0 ? "+" : "-")}" + buffHealth + ")" : "")}");
+            Console.WriteLine($"공격력 : {currentAttackPoint} {(buffAttackPoint != 0 ? $"({(buffAttackPoint >= 0 ? "+" : "")}"+buffAttackPoint+")" : "")}");
+            Console.WriteLine($"방어력 : {currentDefencePoint} {(buffDefencePoint != 0 ? $"({(buffDefencePoint >= 0 ? "+" : "")}" + buffDefencePoint + ")" : "")}");
+            Console.WriteLine($"체 력 : {currentHealth} {(buffHealth != 0 ? $"({(buffHealth >= 0 ? "+" : "")}" + buffHealth + ")" : "")}");
             Console.WriteLine($"Gold : {Inventory.Instance.inventoryGold} G\n");
         }
     }

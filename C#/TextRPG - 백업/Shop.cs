@@ -13,8 +13,7 @@ namespace TextRPG
         {
             if (shopItems.Count == 0)
             {
-                Console.WriteLine("오류 : 현재 상점 정보가 없습니다!!");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("오류 : 현재 상점 정보가 없습니다!!");
                 return;
             }
             
@@ -58,7 +57,7 @@ namespace TextRPG
                     Console.WriteLine("원하시는 아이템을 선택 해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > itemNum || userChoice < 0))
                     {
-                        GameManager.ReadErrorMessage();
+                        GameManager.ReadErrorMessage("잘못된 입력입니다.");
                     }
                     else
                     {
@@ -76,8 +75,7 @@ namespace TextRPG
                             }
                             else
                             {
-                                Console.WriteLine("오류 : 구매할 아이템을 찾지 못했습니다.");
-                                Console.ReadKey();
+                                GameManager.ReadErrorMessage("오류 : 구매할 아이템을 찾지 못했습니다.");
                             }
                         }
                     }
@@ -88,7 +86,7 @@ namespace TextRPG
                     Console.WriteLine("원하시는 아이템을 선택 해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > itemNum || userChoice < 0))
                     {
-                        GameManager.ReadErrorMessage();
+                        GameManager.ReadErrorMessage("잘못된 입력입니다.");
                     }
                     else
                     {
@@ -106,8 +104,7 @@ namespace TextRPG
                             }
                             else
                             {
-                                Console.WriteLine("오류 : 구매할 아이템을 찾지 못했습니다.");
-                                Console.ReadKey();
+                                GameManager.ReadErrorMessage("오류 : 구매할 아이템을 찾지 못했습니다.");
                             }
                         }
                     }
@@ -121,7 +118,7 @@ namespace TextRPG
                     Console.WriteLine("원하시는 행동을 입력해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > 2 || userChoice < 0))
                     {
-                        GameManager.ReadErrorMessage();
+                        GameManager.ReadErrorMessage("잘못된 입력입니다.");
                     }
                     else
                     {
@@ -158,8 +155,7 @@ namespace TextRPG
                     }
                     break;
                 default:
-                    Console.WriteLine("상점의 정보가 올바르지 않습니다.");
-                    Console.ReadKey();
+                    GameManager.ReadErrorMessage("상점의 정보가 올바르지 않습니다.");
                     return;
             }
         }
@@ -168,20 +164,17 @@ namespace TextRPG
         {
             if(Inventory.Instance.getInventoryItem.Find(i => i == item) != null)
             {
-                Console.WriteLine("이미 구매한 아이템입니다.");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("이미 구매한 아이템입니다.");
             }
             else if (Inventory.Instance.inventoryGold >= item.getPrice)
             {
                 Inventory.Instance.inventoryGold -= item.getPrice;
                 Inventory.Instance.GetItem(item);
-                Console.WriteLine("구매를 완료했습니다.");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("구매를 완료했습니다.");
             }
             else
             {
-                Console.WriteLine("Gold 가 부족합니다.");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("Gold 가 부족합니다.");
             }
         }
 
@@ -191,13 +184,11 @@ namespace TextRPG
             {
                 Inventory.Instance.inventoryGold += item.sellPrice;
                 Inventory.Instance.LostItem(item);
-                Console.WriteLine("판매를 완료했습니다.");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("판매를 완료했습니다.");
             }
             else
             {
-                Console.WriteLine("오류 : 아이템을 찾을 수 없습니다!!");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("오류 : 아이템을 찾을 수 없습니다!!");
             }
         }
     }

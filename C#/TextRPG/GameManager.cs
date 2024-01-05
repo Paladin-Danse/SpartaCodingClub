@@ -29,7 +29,7 @@
             Console.Write("원하시는 행동을 입력해주세요.\n>>");
             if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > 3 || userChoice < 0))
             {
-                ReadErrorMessage();
+                ReadErrorMessage("잘못된 입력입니다.");
             }
             else
             {
@@ -63,7 +63,7 @@
                 Console.Write("원하시는 행동을 입력해주세요.\n>>");
                 if (int.TryParse(Console.ReadLine(), out userChoice) == false || userChoice != 0)
                 {
-                    ReadErrorMessage();
+                    ReadErrorMessage("잘못된 입력입니다.");
                 }
                 else
                 {
@@ -81,7 +81,7 @@
                 PlayerName = Console.ReadLine();
                 if(PlayerName == null)
                 {
-                    ReadErrorMessage();
+                    ReadErrorMessage("잘못된 입력입니다.");
                 }
                 else break;
             }
@@ -102,9 +102,9 @@
                 if (isGameEnd == true) break;
             }
         }
-        static public void ReadErrorMessage()
+        static public void ReadErrorMessage(string _Message)
         {
-            Console.WriteLine("잘못된 입력입니다.");
+            Console.WriteLine(_Message);
             Console.ReadKey();
         }
         static public void PlayerGetBuffed(ITEM_EFFECT _eItemEffect, int buffPoint)

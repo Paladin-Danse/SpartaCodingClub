@@ -23,11 +23,14 @@ namespace TextRPG
             get { return isEquip; }
             set 
             {
-                isEquip = value;
-                if (isEquip)
-                    GameManager.PlayerGetBuffed(getItemEffect, getBuffPoint);
-                else
-                    GameManager.PlayerGetBuffed(getItemEffect, -getBuffPoint);
+                if (isEquip != value)
+                {
+                    isEquip = value;
+                    if (isEquip)
+                        GameManager.PlayerGetBuffed(getItemEffect, getBuffPoint);
+                    else
+                        GameManager.PlayerGetBuffed(getItemEffect, -getBuffPoint);
+                }
             }
         }
         int buffPoint;
@@ -116,7 +119,7 @@ namespace TextRPG
             }
             else
             {
-                Console.WriteLine("오류 : 예외처리 부족!!");
+                GameManager.ReadErrorMessage("오류 : 예외처리 부족!!");
             }
             Console.WriteLine($"- {modeNum}{name}  | {itemEffect} {(buffPoint >= 0 ? "+" : "")}{buffPoint} | {description}      | {(_isBuyed ? "구매완료" : price)}");
 

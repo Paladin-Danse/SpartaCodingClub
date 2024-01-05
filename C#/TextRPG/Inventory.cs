@@ -25,6 +25,87 @@ namespace TextRPG
         //골드
         int gold;
         public int inventoryGold { get { return gold; } set { gold = value; } }
+        Equipment equipWeapon;
+        public Equipment equipWeaponAccess
+        {
+            get { return equipWeapon; }
+            set
+            {
+                //장비하고 있는 무기가 비어있다면(들어온 무기 넣기)
+                if (equipWeapon == null)
+                {
+                    equipWeapon = value;
+                    equipWeapon.onEquip = true;
+                }
+                //장비하고 있는 무기하고 다른 무기가 들어온다면(원래 장비를 빼고 새로운 장비를 채워넣기)
+                else if (equipWeapon != value)
+                {
+                    equipWeapon.onEquip = false;
+                    equipWeapon = value;
+                    equipWeapon.onEquip = true;
+                }
+                //장비하고 있는 무기를 한번 더 불러온다면(비우기)
+                else
+                {
+                    equipWeapon.onEquip = false;
+                    equipWeapon = null;
+                }
+            }
+        }
+        Equipment equipArmor;
+        public Equipment equipArmorAccess
+        {
+            get { return equipArmor; }
+            set
+            {
+                //장비하고 있는 무기가 비어있다면(들어온 무기 넣기)
+                if (equipArmor == null)
+                {
+                    equipArmor = value;
+                    equipArmor.onEquip = true;
+                }
+                //장비하고 있는 무기하고 다른 무기가 들어온다면(원래 장비를 빼고 새로운 장비를 채워넣기)
+                else if (equipWeapon != value)
+                {
+                    equipArmor.onEquip = false;
+                    equipArmor = value;
+                    equipArmor.onEquip = true;
+                }
+                //장비하고 있는 무기를 한번 더 불러온다면(비우기)
+                else
+                {
+                    equipArmor.onEquip = false;
+                    equipArmor = null;
+                }
+            }
+        }
+        Equipment equipAccesory;
+        public Equipment equipAccesoryAccess
+        {
+            get { return equipAccesory; }
+            set
+            {
+                //장비하고 있는 무기가 비어있다면(들어온 무기 넣기)
+                if (equipAccesory == null)
+                {
+                    equipAccesory = value;
+                    equipAccesory.onEquip = true;
+                }
+                //장비하고 있는 무기하고 다른 무기가 들어온다면(원래 장비를 빼고 새로운 장비를 채워넣기)
+                else if (equipWeapon != value)
+                {
+                    equipAccesory.onEquip = false;
+                    equipAccesory = value;
+                    equipAccesory.onEquip = true;
+                }
+                //장비하고 있는 무기를 한번 더 불러온다면(비우기)
+                else
+                {
+                    equipAccesory.onEquip = false;
+                    equipAccesory = null;
+                }
+            }
+        }
         public void InventoryOpen()
         {
             while (true)
@@ -37,7 +118,7 @@ namespace TextRPG
 
                 if (items.Count > 0)
                 {
-                    //장착관리 온
+                    //장착관리모드 온
                     if (isEquipMode)
                     {
                         foreach (Equipment item in items)
@@ -49,7 +130,7 @@ namespace TextRPG
                             array_equipment[itemNum] = item;
                         }
                     }
-                    //장착관리 오프
+                    //장착관리모드 오프
                     //장착을 하지않는 일반 아이템(포션, 열쇠, etc...)도 표시하기 위한 코드.
                     else
                     {
@@ -61,7 +142,7 @@ namespace TextRPG
                 }
 
                 Console.WriteLine();
-
+                //장착관리모드 오프일 때 입력처리
                 if (isEquipMode == false)
                 {
                     Console.WriteLine("1. 장착관리");
@@ -70,7 +151,7 @@ namespace TextRPG
                     Console.Write("원하시는 행동을 입력해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > 1 || userChoice < 0))
                     {
-                        GameManager.ReadErrorMessage();
+                        GameManager.ReadErrorMessage("잘못된 입력입니다.");
                     }
                     else
                     {
@@ -81,13 +162,14 @@ namespace TextRPG
                         else break;
                     }
                 }
+                //장착관리모드 온일 때 입력처리
                 else
                 {
                     Console.WriteLine("0. 나가기");
                     Console.Write("장착하실 장비를 입력해주세요.\n>>");
                     if (int.TryParse(Console.ReadLine(), out userChoice) == false || (userChoice > itemNum || userChoice < 0))
                     {
-                        GameManager.ReadErrorMessage();
+                        GameManager.ReadErrorMessage("잘못된 입력입니다.");
                     }
                     else
                     {
@@ -99,13 +181,27 @@ namespace TextRPG
                         Equipment equipment = null;
                         if (items.Find(item => item == array_equipment[userChoice]) != null)
                             equipment = (Equipment)items.Find(item => item == array_equipment[userChoice]);
-                        
+
                         if (equipment != null)
-                            equipment.onEquip = !equipment.onEquip;
+                        {
+                            switch (equipment.getEnumEquipment)
+                            {
+                                case EQUIPMENT.EQUIPMENT_WEAPON:
+                                    equipWeaponAccess = equipment;
+                                    break;
+                                case EQUIPMENT.EQUIPMENT_ARMOR:
+                                    equipArmorAccess = equipment;
+                                    break;
+                                case EQUIPMENT.EQUIPMENT_ACCESSORY:
+                                    equipAccesory = equipment;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
                         else
                         {
-                            Console.WriteLine("오류 : 장착하실 장비의 데이터를 찾지 못했습니다.");
-                            Console.ReadKey();
+                            GameManager.ReadErrorMessage("오류 : 장착하실 장비의 데이터를 찾지 못했습니다.");
                         }
                     }
                 }
@@ -125,8 +221,7 @@ namespace TextRPG
             }
             else
             {
-                Console.WriteLine("오류 : 인벤토리 안에 판매하실 아이템이 없습니다.");
-                Console.ReadKey();
+                GameManager.ReadErrorMessage("오류 : 인벤토리 안에 판매하실 아이템이 없습니다.");
             }
         }
     }
