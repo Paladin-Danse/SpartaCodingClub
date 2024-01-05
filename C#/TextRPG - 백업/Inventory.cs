@@ -91,19 +91,17 @@ namespace TextRPG
                     }
                     else
                     {
-                        if (userChoice == 0 && isEquipMode) isEquipMode = false;
+                        if (userChoice == 0 && isEquipMode)
+                        {
+                            isEquipMode = false;
+                            continue;
+                        }
                         Equipment equipment = null;
                         if (items.Find(item => item == array_equipment[userChoice]) != null)
                             equipment = (Equipment)items.Find(item => item == array_equipment[userChoice]);
                         
                         if (equipment != null)
-                        {
                             equipment.onEquip = !equipment.onEquip;
-                            if (equipment.onEquip)
-                                GameManager.PlayerGetBuffed(equipment.getItemEffect, equipment.getBuffPoint);
-                            else
-                                GameManager.PlayerGetBuffed(equipment.getItemEffect, -equipment.getBuffPoint);
-                        }
                         else
                         {
                             Console.WriteLine("오류 : 장착하실 장비의 데이터를 찾지 못했습니다.");
@@ -116,6 +114,20 @@ namespace TextRPG
         public void GetItem(Item _item)
         {
             items.Add(_item);
+        }
+        public void LostItem(Item _item)
+        {
+            if (items.Find(item => item == _item) != null)
+            {
+                Equipment equipment = (Equipment)_item;
+                if (equipment != null) equipment.onEquip = false;
+                items.Remove(_item);
+            }
+            else
+            {
+                Console.WriteLine("오류 : 인벤토리 안에 판매하실 아이템이 없습니다.");
+                Console.ReadKey();
+            }
         }
     }
 }

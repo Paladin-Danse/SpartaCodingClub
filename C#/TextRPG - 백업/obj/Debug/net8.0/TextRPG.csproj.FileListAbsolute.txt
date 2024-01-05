@@ -21,3 +21,10 @@ D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.sourcelink.json
 D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.dll
 D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\refint\TextRPG.dll
 D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.pdb
+D:\MyWork\C#\TextRPG - 백업\bin\Debug\net8.0\TextRPG.exe
+D:\MyWork\C#\TextRPG - 백업\bin\Debug\net8.0\TextRPG.deps.json
+D:\MyWork\C#\TextRPG - 백업\bin\Debug\net8.0\TextRPG.runtimeconfig.json
+D:\MyWork\C#\TextRPG - 백업\bin\Debug\net8.0\TextRPG.dll
+D:\MyWork\C#\TextRPG - 백업\bin\Debug\net8.0\TextRPG.pdb
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\TextRPG.genruntimeconfig.cache
+D:\MyWork\C#\TextRPG - 백업\obj\Debug\net8.0\ref\TextRPG.dll
