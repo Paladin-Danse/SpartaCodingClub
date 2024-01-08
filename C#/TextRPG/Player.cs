@@ -16,15 +16,17 @@ namespace TextRPG
         //공격력
         int defaultAttackPoint;
         public int buffAttackPoint;
-        int currentAttackPoint { get { return defaultAttackPoint + buffAttackPoint; } }
+        public int currentAttackPoint { get { return defaultAttackPoint + buffAttackPoint; } }
         //방어력
         int defaultDefencePoint;
         public int buffDefencePoint;
-        int currentDefencePoint { get { return defaultDefencePoint + buffDefencePoint; } }
+        public int currentDefencePoint { get { return defaultDefencePoint + buffDefencePoint; } }
         //체력
-        int defaultHealth;
-        public int buffHealth;
-        int currentHealth { get { return defaultHealth + buffHealth; } }
+        int defaultMaxHealth;
+        public int buffMaxHealth;
+        public int currentMaxHealth { get { return defaultMaxHealth + buffMaxHealth; } }
+        int currentHealth;
+        public int getHP { get { return currentHealth; } }
 
         public Player(int _level, string _name, CLASS _class, int _attackPoint, int _defencePoint, int _health)
         {
@@ -38,8 +40,10 @@ namespace TextRPG
             defaultDefencePoint = _defencePoint;
             buffDefencePoint = 0;
 
-            defaultHealth = _health;
-            buffHealth = 0;
+            defaultMaxHealth = _health;
+            buffMaxHealth = 0;
+
+            currentHealth = currentMaxHealth;
         }
 
         public void PlayerInfo()
@@ -67,8 +71,18 @@ namespace TextRPG
             //버프된 능력치는 0이 아닐 때 뒤에 (+n) 형식으로 표기됨. 0이라면 표시되지 않음.
             Console.WriteLine($"공격력 : {currentAttackPoint} {(buffAttackPoint != 0 ? $"({(buffAttackPoint >= 0 ? "+" : "")}"+buffAttackPoint+")" : "")}");
             Console.WriteLine($"방어력 : {currentDefencePoint} {(buffDefencePoint != 0 ? $"({(buffDefencePoint >= 0 ? "+" : "")}" + buffDefencePoint + ")" : "")}");
-            Console.WriteLine($"체 력 : {currentHealth} {(buffHealth != 0 ? $"({(buffHealth >= 0 ? "+" : "")}" + buffHealth + ")" : "")}");
+            Console.WriteLine($"체 력 : {currentHealth}/{currentMaxHealth} {(buffMaxHealth != 0 ? $"({(buffMaxHealth >= 0 ? "+" : "")}" + buffMaxHealth + ")" : "")}");
             Console.WriteLine($"Gold : {Inventory.Instance.inventoryGold} G\n");
+        }
+        public void Damaged(int _damage)
+        {
+            currentHealth -= _damage;
+            if (currentHealth < 0) currentHealth = 0;
+        }
+        public void Healed(int _heal)
+        {
+            currentHealth += _heal;
+            if (currentHealth > currentMaxHealth) currentHealth = currentMaxHealth;
         }
     }
 }

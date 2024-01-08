@@ -1,0 +1,15 @@
+D:\MyWork\C#\10_1\10_1\bin\Debug\net8.0\10_1.exe
+D:\MyWork\C#\10_1\10_1\bin\Debug\net8.0\10_1.deps.json
+D:\MyWork\C#\10_1\10_1\bin\Debug\net8.0\10_1.runtimeconfig.json
+D:\MyWork\C#\10_1\10_1\bin\Debug\net8.0\10_1.dll
+D:\MyWork\C#\10_1\10_1\bin\Debug\net8.0\10_1.pdb
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.AssemblyInfoInputs.cache
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.AssemblyInfo.cs
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.sourcelink.json
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.dll
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\refint\10_1.dll
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.pdb
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\10_1.genruntimeconfig.cache
+D:\MyWork\C#\10_1\10_1\obj\Debug\net8.0\ref\10_1.dll
