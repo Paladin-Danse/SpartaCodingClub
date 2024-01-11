@@ -44,8 +44,11 @@ namespace SnakeGame
                 }
             }
         }
-
+        
         LinkedList<Point> snakeBody;
+
+        public int snakeBodyCnt { get { return snakeBody.Count; } }
+
         public Snake(Point _point, int _size, Direction _direction)
         {
             headPos = new Point(_point.x, _point.y, headSym);

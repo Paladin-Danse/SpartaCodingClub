@@ -13,13 +13,17 @@ namespace SnakeGame
     {
         static int MapX = 80;
         static int MapY = 20;
+        static int ScorePosX = 30;
+        static int ScorePosY = 25;
         static int creatTime = 0;
         static bool isGameOver = false;
         static void Main(string[] args)
         {
-            Console.SetWindowSize(MapX + 2, MapY + 1);//벽을 그리기엔 한 칸씩 모자라서 늘림
+            //아래에 메뉴를 표시하기 위해 10칸 정도의 y값을 확보
+            //벽을 그리기엔 모자라서 늘림
+            Console.SetWindowSize(MapX + 2, MapY + 10);
             List<Point> Wall = new List<Point>();
-
+            int eatFoodCnt = 0;
             for(int y = 0; y <= MapY; y++)
             {
                 Wall.Add(new Point(0, y, '▩'));
@@ -97,6 +101,7 @@ namespace SnakeGame
                     {
                         if (snake.getHeadPosition.IsHit(foodPoint))//음식과 부딪혔는지?
                         {
+                            eatFoodCnt++;
                             snake.getNewBody();
                             foodList.Remove(foodPoint);
                             break;
@@ -117,10 +122,16 @@ namespace SnakeGame
                 }
                 
                 snake.Draw();
-                
-                Thread.Sleep(200); // 게임 속도 조절 (이 값을 변경하면 게임의 속도가 바뀝니다)
 
                 // 뱀의 상태를 출력합니다 (예: 현재 길이, 먹은 음식의 수 등)
+                Console.SetCursorPosition(ScorePosX, ScorePosY);
+                Console.Write($"뱀의 길이 : {snake.snakeBodyCnt}");
+                Console.SetCursorPosition(ScorePosX, ScorePosY + 1);
+                Console.Write($"뱀이 먹은 $ : {eatFoodCnt}");
+
+                if(!isGameOver) Thread.Sleep(200); // 게임 속도 조절 (이 값을 변경하면 게임의 속도가 바뀝니다)
+
+                
             }
             Console.SetCursorPosition((MapX / 2) - 8, MapY / 2);
             Console.WriteLine("게 임 오 버");
