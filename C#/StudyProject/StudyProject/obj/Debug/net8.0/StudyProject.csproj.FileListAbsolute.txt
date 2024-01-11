@@ -1,0 +1,15 @@
+D:\MyWork\C#\StudyProject\StudyProject\bin\Debug\net8.0\StudyProject.exe
+D:\MyWork\C#\StudyProject\StudyProject\bin\Debug\net8.0\StudyProject.deps.json
+D:\MyWork\C#\StudyProject\StudyProject\bin\Debug\net8.0\StudyProject.runtimeconfig.json
+D:\MyWork\C#\StudyProject\StudyProject\bin\Debug\net8.0\StudyProject.dll
+D:\MyWork\C#\StudyProject\StudyProject\bin\Debug\net8.0\StudyProject.pdb
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.AssemblyInfoInputs.cache
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.AssemblyInfo.cs
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.sourcelink.json
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.dll
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\refint\StudyProject.dll
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.pdb
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\StudyProject.genruntimeconfig.cache
+D:\MyWork\C#\StudyProject\StudyProject\obj\Debug\net8.0\ref\StudyProject.dll
