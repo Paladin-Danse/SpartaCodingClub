@@ -149,13 +149,16 @@
     public class Blackjack
     {
         Point dealerTable = new Point(10, 5);
-        Point playerTable = new Point(10, 10);
-        Point menuPos = new Point(20, 20);
+        Point playerTable = new Point(10, 15);
+        Point menuPos = new Point(20, 25);
+        Point resultPos = new Point(20, 30);
         // 코드를 여기에 작성하세요
         Player player = new Player();
         Dealer dealer = new Dealer();
         Deck deck = new Deck();
-        bool isGameSet = false;
+        bool isPlayerTurn = true;
+        bool isPlayerBurst = false;
+        bool isDealerBurst = false;
         public void GameStart()
         {
             //시작할 때 플레이어와 딜러가 카드를 두장씩 뽑음.
@@ -166,26 +169,142 @@
                 dealer.DrawCardFromDeck(deck);
             }
 
-            while (!isGameSet)
+            Console.Clear();
+            Console.SetCursorPosition(dealerTable.x, dealerTable.y);
+            Console.Write(dealer.Hand.getCards.First().ToString() + " ");
+
+            Console.SetCursorPosition(dealerTable.x, dealerTable.y + 1);
+            Console.Write($"▩ ");//두 번째 카드는 필드에 나와있지만 가림.
+
+            int cnt = 0;
+            foreach(Card card in player.Hand.getCards)
             {
-                Console.SetCursorPosition(dealerTable.x, dealerTable.y);
-                Console.Write(dealer.Hand.getCards.First().ToString() + " ");
-
-                Console.SetCursorPosition(dealerTable.x, dealerTable.y + 1);
-                Console.Write($"▩ ");
-
-                int cnt = 0;
-                foreach(Card card in player.Hand.getCards)
-                {
-                    Console.SetCursorPosition(playerTable.x, playerTable.y + (cnt++));
-                    Console.Write(card.ToString() + " ");
-                }
-
-                Console.SetCursorPosition(menuPos.x, menuPos.y);
-
-                //임시
-                isGameSet = true;
+                Console.SetCursorPosition(playerTable.x, playerTable.y + (cnt++));
+                Console.Write(card.ToString() + " ");
             }
+            Console.SetCursorPosition(playerTable.x, playerTable.y - 1);
+            Console.Write($"total : {player.Hand.GetTotalValue()}");
+
+
+            if (player.Hand.GetTotalValue() == 21)
+            {
+                PlayerWin("블랙잭!!");
+                return;
+            }
+            if (dealer.Hand.GetTotalValue() == 21)
+            {
+                DealerWin("블랙잭!!");
+                return;
+            }
+
+            Console.SetCursorPosition(menuPos.x, menuPos.y);
+            Console.Write("1. 히트(한장 더)");
+            Console.SetCursorPosition(menuPos.x, menuPos.y + 1);
+            Console.Write("2. 스테이(멈추기)");
+            //플레이어 턴
+            while (isPlayerTurn)
+            {
+                int menuSelect;
+
+                Console.SetCursorPosition(menuPos.x, menuPos.y + 2);
+                Console.Write(' ');
+                Console.SetCursorPosition(menuPos.x, menuPos.y + 2);
+                if (int.TryParse(Console.ReadLine(), out menuSelect))
+                {
+                    if (menuSelect == 1)
+                    {
+                        Card drawCard = player.DrawCardFromDeck(deck);
+
+                        Console.SetCursorPosition(playerTable.x, playerTable.y - 1);
+                        Console.Write($"total : {player.Hand.GetTotalValue()}");
+                        Console.SetCursorPosition(playerTable.x, playerTable.y + (player.Hand.getCards.Count - 1));
+                        Console.Write(drawCard.ToString() + " ");
+
+                        if(player.Hand.GetTotalValue() > 21)//버스트
+                        {
+                            isPlayerBurst = true;
+                            isPlayerTurn = false;
+                        }
+                    }
+                    else if (menuSelect == 2)
+                    {
+                        isPlayerTurn = false;
+                    }
+                }
+            }
+            if (isPlayerBurst)
+            {
+                DealerWin("플레이어 버스트!!");
+                return;
+            }
+
+            Console.SetCursorPosition(dealerTable.x, dealerTable.y + 1);
+            Console.Write(dealer.Hand.getCards[1]);//두 번째 카드 공개
+            Console.SetCursorPosition(dealerTable.x, dealerTable.y - 1);
+            Console.Write($"total : {dealer.Hand.GetTotalValue()}");
+            //딜러의 턴
+            while (dealer.Hand.GetTotalValue() < 17)
+            {
+                Thread.Sleep(300);
+
+                Card drawCard = dealer.DrawCardFromDeck(deck);
+
+                Console.SetCursorPosition(dealerTable.x, dealerTable.y - 1);
+                Console.Write($"total : {dealer.Hand.GetTotalValue()}");
+                Console.SetCursorPosition(dealerTable.x, dealerTable.y + (dealer.Hand.getCards.Count - 1));
+                Console.Write(drawCard.ToString());
+                if(dealer.Hand.GetTotalValue() > 21)//버스트
+                {
+                    isDealerBurst = true;
+                }
+            }
+                
+            if(isDealerBurst)
+            {
+                PlayerWin("딜러 버스트!!");
+                return;
+            }
+
+            Console.SetCursorPosition(resultPos.x, resultPos.y);
+            Console.Write($"플레이어 {player.Hand.GetTotalValue()} : 딜러 {dealer.Hand.GetTotalValue()}");
+            if(player.Hand.GetTotalValue() > dealer.Hand.GetTotalValue())
+            {
+                PlayerWin();
+            }
+            else if(player.Hand.GetTotalValue() < dealer.Hand.GetTotalValue())
+            {
+                DealerWin();
+            }
+            else
+            {
+                Console.SetCursorPosition(resultPos.x, resultPos.y + 1);
+                Console.Write("무승부");
+            }
+        }
+
+        public void PlayerWin(string _message)
+        {
+            Console.SetCursorPosition(resultPos.x, resultPos.y);
+            Console.Write(_message);
+            Console.SetCursorPosition(resultPos.x, resultPos.y + 1);
+            Console.Write("플레이어의 승리!");
+        }
+        public void PlayerWin()
+        {
+            Console.SetCursorPosition(resultPos.x, resultPos.y + 1);
+            Console.Write("플레이어의 승리!");
+        }
+        public void DealerWin(string _message)
+        {
+            Console.SetCursorPosition(resultPos.x, resultPos.y);
+            Console.Write(_message);
+            Console.SetCursorPosition(resultPos.x, resultPos.y + 1);
+            Console.Write("딜러의 승리!");
+        }
+        public void DealerWin()
+        {
+            Console.SetCursorPosition(resultPos.x, resultPos.y + 1);
+            Console.Write("딜러의 승리!");
         }
     }
 
@@ -193,7 +312,7 @@
     {
         static void Main(string[] args)
         {
-            Point WindowSize = new Point(80, 30);
+            Point WindowSize = new Point(80, 40);
             Console.SetWindowSize(WindowSize.x, WindowSize.y);
 
             // 블랙잭 게임을 실행하세요
