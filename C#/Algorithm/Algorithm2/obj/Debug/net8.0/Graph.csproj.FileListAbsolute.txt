@@ -1,0 +1,15 @@
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Graph.exe
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Graph.deps.json
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Graph.runtimeconfig.json
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Graph.dll
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Graph.pdb
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.AssemblyInfoInputs.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.AssemblyInfo.cs
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.sourcelink.json
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.dll
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\refint\Graph.dll
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.pdb
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Graph.genruntimeconfig.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\ref\Graph.dll

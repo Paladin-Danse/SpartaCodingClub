@@ -1,0 +1,15 @@
+D:\MyWork\C#\Algorithm\Divide&Conquer\bin\Debug\net8.0\Divide&Conquer.exe
+D:\MyWork\C#\Algorithm\Divide&Conquer\bin\Debug\net8.0\Divide&Conquer.deps.json
+D:\MyWork\C#\Algorithm\Divide&Conquer\bin\Debug\net8.0\Divide&Conquer.runtimeconfig.json
+D:\MyWork\C#\Algorithm\Divide&Conquer\bin\Debug\net8.0\Divide&Conquer.dll
+D:\MyWork\C#\Algorithm\Divide&Conquer\bin\Debug\net8.0\Divide&Conquer.pdb
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.AssemblyInfoInputs.cache
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.AssemblyInfo.cs
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.sourcelink.json
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.dll
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\refint\Divide&Conquer.dll
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.pdb
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\Divide&Conquer.genruntimeconfig.cache
+D:\MyWork\C#\Algorithm\Divide&Conquer\obj\Debug\net8.0\ref\Divide&Conquer.dll

@@ -1,0 +1,15 @@
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Algorithm2.exe
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Algorithm2.deps.json
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Algorithm2.runtimeconfig.json
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Algorithm2.dll
+D:\MyWork\C#\Algorithm\Algorithm2\bin\Debug\net8.0\Algorithm2.pdb
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.AssemblyInfoInputs.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.AssemblyInfo.cs
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.sourcelink.json
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.dll
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\refint\Algorithm2.dll
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.pdb
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\Algorithm2.genruntimeconfig.cache
+D:\MyWork\C#\Algorithm\Algorithm2\obj\Debug\net8.0\ref\Algorithm2.dll

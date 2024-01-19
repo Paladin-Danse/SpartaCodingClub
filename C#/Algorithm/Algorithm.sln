@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{46DFDF99-68FB-4721-8AC3-C930B394F2BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Algorithm2\Graph.csproj", "{4948A7ED-B594-4F00-864A-D6B0B933DE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestPathProblem", "ShortestPathProblem\ShortestPathProblem.csproj", "{6D228311-2447-4C38-975E-95D139CF1993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic_Programming", "Dynamic_Programming\Dynamic_Programming.csproj", "{FC82D1D3-BA31-439A-AE3F-8367D08A7447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greedy_Algorithm", "Greedy_Algorithm\Greedy_Algorithm.csproj", "{17474531-C6E2-49D7-B690-71FE0779B2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divide&Conquer", "Divide&Conquer\Divide&Conquer.csproj", "{BF3FEF3E-40D5-423E-A478-8656B5311E91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46DFDF99-68FB-4721-8AC3-C930B394F2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DFDF99-68FB-4721-8AC3-C930B394F2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DFDF99-68FB-4721-8AC3-C930B394F2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DFDF99-68FB-4721-8AC3-C930B394F2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4948A7ED-B594-4F00-864A-D6B0B933DE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4948A7ED-B594-4F00-864A-D6B0B933DE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4948A7ED-B594-4F00-864A-D6B0B933DE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4948A7ED-B594-4F00-864A-D6B0B933DE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D228311-2447-4C38-975E-95D139CF1993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D228311-2447-4C38-975E-95D139CF1993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D228311-2447-4C38-975E-95D139CF1993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D228311-2447-4C38-975E-95D139CF1993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC82D1D3-BA31-439A-AE3F-8367D08A7447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC82D1D3-BA31-439A-AE3F-8367D08A7447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC82D1D3-BA31-439A-AE3F-8367D08A7447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC82D1D3-BA31-439A-AE3F-8367D08A7447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17474531-C6E2-49D7-B690-71FE0779B2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17474531-C6E2-49D7-B690-71FE0779B2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17474531-C6E2-49D7-B690-71FE0779B2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17474531-C6E2-49D7-B690-71FE0779B2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3FEF3E-40D5-423E-A478-8656B5311E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3FEF3E-40D5-423E-A478-8656B5311E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3FEF3E-40D5-423E-A478-8656B5311E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3FEF3E-40D5-423E-A478-8656B5311E91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C7C7EA2-473B-4D4A-9139-A58ADA0E14D7}
+	EndGlobalSection
+EndGlobal

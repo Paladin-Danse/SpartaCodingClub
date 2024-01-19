@@ -1,0 +1,15 @@
+D:\MyWork\C#\Algorithm\ShortestPathProblem\bin\Debug\net8.0\ShortestPathProblem.exe
+D:\MyWork\C#\Algorithm\ShortestPathProblem\bin\Debug\net8.0\ShortestPathProblem.deps.json
+D:\MyWork\C#\Algorithm\ShortestPathProblem\bin\Debug\net8.0\ShortestPathProblem.runtimeconfig.json
+D:\MyWork\C#\Algorithm\ShortestPathProblem\bin\Debug\net8.0\ShortestPathProblem.dll
+D:\MyWork\C#\Algorithm\ShortestPathProblem\bin\Debug\net8.0\ShortestPathProblem.pdb
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.AssemblyInfoInputs.cache
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.AssemblyInfo.cs
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.sourcelink.json
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.dll
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\refint\ShortestPathProblem.dll
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.pdb
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ShortestPathProblem.genruntimeconfig.cache
+D:\MyWork\C#\Algorithm\ShortestPathProblem\obj\Debug\net8.0\ref\ShortestPathProblem.dll

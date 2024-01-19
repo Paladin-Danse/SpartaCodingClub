@@ -1,0 +1,15 @@
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\bin\Debug\net8.0\Greedy_Algorithm.exe
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\bin\Debug\net8.0\Greedy_Algorithm.deps.json
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\bin\Debug\net8.0\Greedy_Algorithm.runtimeconfig.json
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\bin\Debug\net8.0\Greedy_Algorithm.dll
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\bin\Debug\net8.0\Greedy_Algorithm.pdb
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.AssemblyInfoInputs.cache
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.AssemblyInfo.cs
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.csproj.CoreCompileInputs.cache
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.sourcelink.json
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.dll
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\refint\Greedy_Algorithm.dll
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.pdb
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\Greedy_Algorithm.genruntimeconfig.cache
+D:\MyWork\C#\Algorithm\Greedy_Algorithm\obj\Debug\net8.0\ref\Greedy_Algorithm.dll
