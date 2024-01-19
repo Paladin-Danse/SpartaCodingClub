@@ -47,22 +47,22 @@ public class Player : MonoBehaviour
         float t = 0;
         Vector3 beforePos = transform.position;
         Vector3 afterPos = transform.position + Direction;
-        while (transform.position != afterPos)
+        int layerMask = LayerMask.GetMask("Wall");
+
+        if (Physics2D.Raycast(beforePos, Direction, 1.5f, layerMask))
         {
-            t += (Time.deltaTime * PlayerMoveSpeed);
-            transform.position = Vector3.Lerp(beforePos, afterPos, t);
-            yield return null;
+            moveCorout = null;
         }
-        moveCorout = null;
+        else
+        {
+            while (transform.position != afterPos)
+            {
+                t += (Time.deltaTime * PlayerMoveSpeed);
+                transform.position = Vector3.Lerp(beforePos, afterPos, t);
+
+                yield return null;
+            }
+            moveCorout = null;
+        }
     }
 }
-/*
- while (t <= 1.0f)
-        {
-            Liquid_Renderer.material.Lerp(oldLiquid, newLiquid, t);
-            t += Time.deltaTime;
-
-            yield return null;
-        }
-        Get_Liquid_Court = null;
- */
