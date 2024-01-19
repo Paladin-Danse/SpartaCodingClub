@@ -1,29 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     float PlayerInputX;
     float PlayerInputY;
     [SerializeField]
     float PlayerMoveSpeed = 1.5f;
-
-    Rigidbody2D playerRigid;
+    bool isMovable = true;
     IEnumerator moveCorout;
+
+    //컴포넌트
+    SpriteRenderer spriteRenderer;
+    Animator anim;
+
+    string Character_Path = "Playable_Penguin";
     // Start is called before the first frame update
     void Start()
     {
-        playerRigid = GetComponent<Rigidbody2D>();
         moveCorout = null;
+        anim = transform.Find(Character_Path).GetComponent<Animator>();
+        /*플레이어 캐릭터가 늘어나면 쓸 스위치문. Sprite_Path값을 여기서 초기화. 애니메이터도 여기서 초기화 해줄 것.
+        switch (PLAYABLE_CHAR)
+        {
+            case PLAYABLE_CHAR.PENGUIN:
+                break;
+            default:
+                break;
+        }
+        */
+        if (transform.Find(Character_Path))
+            spriteRenderer = transform.Find(Character_Path + "/Sprite").GetComponent<SpriteRenderer>();
+        else
+            Debug.Log("Error");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(isMovable)
+        {
+            Move();
+            if(spriteRenderer) LookAtMouse();
+        }
     }
 
     private void Move()
@@ -37,9 +60,19 @@ public class Player : MonoBehaviour
         //magnitude : 벡터의 크기값 = sqrt(x^2 + y^2 + z^2). 방향키를 입력하지 않으면(0,0,0)이기 때문에 움직이지 않는다.
         if (moveDirection.magnitude > 0 && moveCorout == null)
         {
+            anim.SetBool("isWalk", true);
             moveCorout = MoveCoroutine(moveDirection);
             StartCoroutine(moveCorout);
         }
+        else if(moveDirection.magnitude == 0) anim.SetBool("isWalk", false);
+    }
+
+    private void LookAtMouse()
+    {
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x)
+            spriteRenderer.flipX = false;
+        else
+            spriteRenderer.flipX = true;
     }
 
     private IEnumerator MoveCoroutine(Vector3 Direction)
@@ -47,6 +80,7 @@ public class Player : MonoBehaviour
         float t = 0;
         Vector3 beforePos = transform.position;
         Vector3 afterPos = transform.position + Direction;
+
         int layerMask = LayerMask.GetMask("Wall");
 
         if (Physics2D.Raycast(beforePos, Direction, 1.5f, layerMask))
