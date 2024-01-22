@@ -11,38 +11,24 @@ public class PlayerMovement : MonoBehaviour
     float PlayerInputY;
     [SerializeField]
     float PlayerMoveSpeed = 1.5f;
-    bool isMovable = true;
+    public bool isMovable = true;
     IEnumerator moveCorout;
 
     //컴포넌트
     SpriteRenderer spriteRenderer;
     Animator anim;
 
-    string Character_Path = "Playable_Penguin";
+    string Character_Path = "";
     // Start is called before the first frame update
     void Start()
     {
         moveCorout = null;
-        anim = transform.Find(Character_Path).GetComponent<Animator>();
-        /*플레이어 캐릭터가 늘어나면 쓸 스위치문. Sprite_Path값을 여기서 초기화. 애니메이터도 여기서 초기화 해줄 것.
-        switch (PLAYABLE_CHAR)
-        {
-            case PLAYABLE_CHAR.PENGUIN:
-                break;
-            default:
-                break;
-        }
-        */
-        if (transform.Find(Character_Path))
-            spriteRenderer = transform.Find(Character_Path + "/Sprite").GetComponent<SpriteRenderer>();
-        else
-            Debug.Log("Error");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isMovable)
+        if(isMovable && Character_Path != "")
         {
             Move();
             if(spriteRenderer) LookAtMouse();
@@ -98,5 +84,17 @@ public class PlayerMovement : MonoBehaviour
             }
             moveCorout = null;
         }
+    }
+
+    public void getPlayerInitInfo(string path)
+    {
+        Character_Path = path;
+
+        anim = transform.Find(Character_Path).GetComponent<Animator>();
+
+        if (transform.Find(Character_Path))
+            spriteRenderer = transform.Find(Character_Path + "/Sprite").GetComponent<SpriteRenderer>();
+        else
+            Debug.Log("Error");
     }
 }
