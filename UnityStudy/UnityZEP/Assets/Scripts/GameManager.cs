@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     PlayerMovement playerMove;
     [SerializeField] Canvas InputUI;
     bool onInit = false;
-    [SerializeField] Sprite spritePenguin;
-    [SerializeField] Sprite spriteWarrior;
     public Player GetPlayer { get { return player; } }
 
     // Start is called before the first frame update
@@ -30,7 +28,6 @@ public class GameManager : MonoBehaviour
         {
             player = GameObject.Find("Player").GetComponent<Player>();
             playerMove = player.gameObject.GetComponent<PlayerMovement>();
-            //Camera.main.GetComponent<CameraChase>().ChasePos(player.transform);
 
             playerMove.isMovable = onInit;
         }
@@ -39,18 +36,5 @@ public class GameManager : MonoBehaviour
     {
         onInit = true;
         playerMove.isMovable = onInit;
-    }
-    public void CharacterSelect(PLAYABLE_CHAR select)
-    {
-        switch (select)
-        {
-            case PLAYABLE_CHAR.PENGUIN:
-
-                break;
-            case PLAYABLE_CHAR.WARRIOR:
-                break;
-            default:
-                break;
-        }
     }
 }

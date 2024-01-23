@@ -12,19 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float PlayerMoveSpeed = 1.5f;
     public bool isMovable = true;
-    IEnumerator moveCorout;
+    IEnumerator moveCorout = null;
 
     //ÄÄÆ÷³ÍÆ®
     SpriteRenderer spriteRenderer;
     Animator anim;
 
     string Character_Path = "";
-    // Start is called before the first frame update
-    void Start()
-    {
-        moveCorout = null;
-    }
-
+    
     // Update is called once per frame
     void Update()
     {

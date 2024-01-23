@@ -21,13 +21,4 @@ public class CameraChase : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, clampMinX, clampMaxX), Mathf.Clamp(transform.position.y, clampMinY, clampMaxY), -10);
         }
     }
-
-
-    /*
-    public void ChasePos(Transform chaseObject)
-    {
-        transform.parent = chaseObject;
-        LockPos = chaseObject.Find("CameraPos").transform.position;
-    }
-    */
 }
