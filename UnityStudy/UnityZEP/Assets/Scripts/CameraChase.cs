@@ -12,9 +12,9 @@ public class CameraChase : MonoBehaviour
     Vector3 LockPos = new Vector3(0, 0, -10);
     bool onCam = true;
     
-    // Update is called once per frame
     void Update()
     {
+        //카메라 제한.
         if(onCam && LockPos != null)
         {
             if (transform.localPosition != LockPos) transform.localPosition = LockPos;

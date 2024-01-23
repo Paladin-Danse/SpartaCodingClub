@@ -16,8 +16,11 @@ public class Player : MonoBehaviour
     Canvas PlayerUI;
     Text nameTxt;
     PlayerMovement playerMove;
+    //나중에 캐릭터 변경이 추가될 떄를 위한 현재캐릭터 변수.
     GameObject currentCharacter;
     PLAYABLE_CHAR eCharacter;
+
+    //플레이어 이름 입력.
     public void PlayerNameInput(string name)
     {
         this.name = name;
@@ -33,6 +36,7 @@ public class Player : MonoBehaviour
 
         PlayerUI.transform.Find("BackGround").GetComponent<RectTransform>().sizeDelta = new Vector2(textSizeX + 40, textSizeY + 40);
     }
+    //플레이어 캐릭터 입력.
     public void PlayerCharacterInput(PLAYABLE_CHAR select)
     {
         eCharacter = select;

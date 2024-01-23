@@ -928,9 +928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a07385f517aa74d998578316bf46b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1649180944}
   InputUI: {fileID: 1440453584}
-  spritePenguin: {fileID: 0}
-  spriteWarrior: {fileID: 0}
 --- !u!4 &501693456
 Transform:
   m_ObjectHideFlags: 0
@@ -1609,8 +1608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390236987
 MonoBehaviour:
@@ -1668,7 +1667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1440453582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,7 +1930,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.44}
+    oldSize: {x: 0.54, y: 0.44}
     newSize: {x: 0.69, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2463,7 +2462,7 @@ GameObject:
   - component: {fileID: 1793909106}
   - component: {fileID: 1793909105}
   m_Layer: 5
-  m_Name: Penguin
+  m_Name: Warrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2486,8 +2485,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15, y: 0}
-  m_SizeDelta: {x: 70, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1793909105
 MonoBehaviour:

@@ -29,14 +29,13 @@ public class PlayerMovement : MonoBehaviour
             if(spriteRenderer) LookAtMouse();
         }
     }
-
+    //이동
     private void Move()
     {
         PlayerInputX = Input.GetAxisRaw("Horizontal");
         PlayerInputY = Input.GetAxisRaw("Vertical");
-        //이전에 작업하던 걸 거의 그대로 가져옴. 여기서 추가적인 수정 필요.
-        //일단 움직일 때 타일이 있다고 가정하고 타일을 주기당 한칸씩 움직이도록 로직을 짜야함.
-        //움직임의 방향을 결정해주는 변수. normalized는 대각선 타일이동에 방해되어 제거
+        //타일을 주기당 한칸씩 움직이도록 로직을 짜야함.
+        //움직임의 방향을 결정해주는 변수. 타일 이동에선 평소에 쓰던 normalized(정규화)가 대각선 타일이동에 방해되어 제거
         Vector3 moveDirection = ((transform.right * PlayerInputX) + (transform.up * PlayerInputY));
         //magnitude : 벡터의 크기값 = sqrt(x^2 + y^2 + z^2). 방향키를 입력하지 않으면(0,0,0)이기 때문에 움직이지 않는다.
         if (moveDirection.magnitude > 0 && moveCorout == null)
@@ -47,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(moveDirection.magnitude == 0) anim.SetBool("isWalk", false);
     }
-
+    //좌,우 회전 처리
     private void LookAtMouse()
     {
         if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x)
@@ -55,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         else
             spriteRenderer.flipX = true;
     }
-
+    //현재 타일에서 다음 타일까지 이동 코루틴
     private IEnumerator MoveCoroutine(Vector3 Direction)
     {
         float t = 0;
@@ -80,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             moveCorout = null;
         }
     }
-
+    //선택된 캐릭터의 경로를 받아옴. 받아온 경로를 토대로 캐릭터의 애니메이터와 렌더러를 가져옴.
     public void getPlayerInitInfo(string path)
     {
         Character_Path = path;
