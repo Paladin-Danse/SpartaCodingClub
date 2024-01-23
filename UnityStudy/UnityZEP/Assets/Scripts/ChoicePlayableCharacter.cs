@@ -12,6 +12,7 @@ public class ChoicePlayableCharacter : MonoBehaviour
         if (ChoiceUI) ChoiceUI.SetActive(false);
         for (int i = 0; i < transform.childCount; i++)
             characters.Add(transform.GetChild(i).gameObject);
+        eCharacter = PLAYABLE_CHAR.NONE;
     }
     //캐릭터를 선택했을 때 해당 캐릭터를 활성화.
     public void ChangedCharacter(string select)

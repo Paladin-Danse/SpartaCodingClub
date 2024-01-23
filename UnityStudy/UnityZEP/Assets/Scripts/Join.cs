@@ -6,30 +6,36 @@ public class Join : MonoBehaviour
 {
     string name;
     Player player;
-    GameObject UICanvas;
     [SerializeField] ChoicePlayableCharacter choicePlayableCharacter;
     Button button;
+    bool isLength = false;
+    bool isChar = false;
     public void PlayerNameInput(string name)
     {
         this.name = name;
     }
 
+    //버튼 활성화 체크
     public void NameLengthCheck(string name)
     {
-        button.interactable = name.Length >= 2 && name.Length <= 10;
+        isLength = name.Length >= 2 && name.Length <= 10;
+        button.interactable = isLength && isChar;
+    }
+    public void onCharacterCheck()
+    {
+        isChar = choicePlayableCharacter.eCharacter != PLAYABLE_CHAR.NONE;
+        button.interactable = isLength && isChar;
     }
 
     public void DisableNameInputUI()
     {
         player.PlayerNameInput(name);
         player.PlayerCharacterInput(choicePlayableCharacter.eCharacter);
-        UICanvas.SetActive(false);
-        GameManager.instance.InitGame();
+        GameManager.instance.DataChangeComplate();
     }
     private void Start()
     {
         player = GameManager.instance.GetPlayer;
-        UICanvas = transform.parent.gameObject;
         button = GetComponent<Button>();
     }
 }

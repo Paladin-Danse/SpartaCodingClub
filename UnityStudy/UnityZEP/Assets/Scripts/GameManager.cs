@@ -18,25 +18,43 @@ public class GameManager : MonoBehaviour
     [SerializeField] Player player;
     PlayerMovement playerMove;
     [SerializeField] Canvas InputUI;
+    [SerializeField] Canvas InGameUI;
     //게임의 시작 기준을 정보가 입력되기 전과 후로 나누는 변수.
-    bool onInit = false;
+    bool onInitGame = false;
     public Player GetPlayer { get { return player; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        InputUI.gameObject.SetActive(true);
         if (player)
         {
             playerMove = player.gameObject.GetComponent<PlayerMovement>();
-            playerMove.isMovable = onInit;//플레이어가 정보가 입력되는 중에 움직이지 않도록 자리 고정.
+            playerMove.isMovable = onInitGame;//플레이어가 정보가 입력되는 중에 움직이지 않도록 자리 고정.
         }
         else
             Debug.Log("오류 : 게임매니저에 플레이어가 없음.");
+        InputDataChange();
+        onInitGame = false;
     }
-    public void InitGame()
+    
+    //프로필 변경 창
+    public void InputDataChange()
     {
-        onInit = true;
-        playerMove.isMovable = onInit;
+        InputUI.gameObject.SetActive(true);
+        InGameUI.gameObject.SetActive(false);
+        setPause(true);
+    }
+
+    public void DataChangeComplate()
+    {
+        if (!onInitGame) onInitGame = true;
+        setPause(false);
+        InputUI.gameObject.SetActive(false);
+        InGameUI.gameObject.SetActive(true);
+    }
+
+    public void setPause(bool setbool)
+    {
+        playerMove.isMovable = !setbool;
     }
 }

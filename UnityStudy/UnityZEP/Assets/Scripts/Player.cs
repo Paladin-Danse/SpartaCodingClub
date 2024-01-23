@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public enum PLAYABLE_CHAR
 {
+    NONE,
     PENGUIN,
     WARRIOR
 }
@@ -51,6 +52,12 @@ public class Player : MonoBehaviour
                 break;
             default:
                 break;
+        }
+        //기존에 있던 캐릭터가 있다면 지우기.
+        if(currentCharacter != null)
+        {
+            currentCharacter.gameObject.SetActive(false);
+            currentCharacter = null;
         }
         currentCharacter = transform.Find(characterPath).gameObject;
         currentCharacter.SetActive(true);
