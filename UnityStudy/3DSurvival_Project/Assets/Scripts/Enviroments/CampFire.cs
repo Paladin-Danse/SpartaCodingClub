@@ -7,7 +7,7 @@ public class CampFire : MonoBehaviour
     public int damage;
     public float damageRate;
 
-    private HashSet<IDamageable> thingsToDamage = new HashSet<IDamageable>();
+    private HashSet<IDamagable> thingsToDamage = new HashSet<IDamagable>();
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class CampFire : MonoBehaviour
 
     void DealDamage()
     {
-        foreach(IDamageable damageable in thingsToDamage)
+        foreach(IDamagable damageable in thingsToDamage)
         {
             damageable.TakePhysicalDamage(damage);
         }
@@ -24,7 +24,7 @@ public class CampFire : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.TryGetComponent(out IDamageable damageable))
+        if(other.gameObject.TryGetComponent(out IDamagable damageable))
         {
             thingsToDamage.Add(damageable);
         }
@@ -32,7 +32,7 @@ public class CampFire : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out IDamageable damageable))
+        if (other.gameObject.TryGetComponent(out IDamagable damageable))
         {
             thingsToDamage.Remove(damageable);
         }
