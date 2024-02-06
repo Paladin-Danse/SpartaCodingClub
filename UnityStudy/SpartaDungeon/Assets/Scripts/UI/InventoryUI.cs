@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
@@ -25,5 +26,13 @@ public class InventoryUI : MonoBehaviour
         }
         else
             gameObject.SetActive(false);
+    }
+
+    public void EquipItem(ItemData itemdata)
+    {
+        foreach(ItemSlotUI data in inventoryItem.Where(slot => slot.itemData != null))
+        {
+            if (data.itemData == itemdata) data.setEquipUI(true);
+        }
     }
 }
