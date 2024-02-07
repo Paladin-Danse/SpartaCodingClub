@@ -10,15 +10,16 @@ public class ItemSlotUI : MonoBehaviour
     Image itemSprite;
     [SerializeField] private PopupWindow popupWindow;
     private Image equipUI;
-    public void setItem(ItemData itemData)
+    public void setItem(ItemData itemdata)
     {
         if(itemSprite == null) itemSprite = transform.Find("Back/ItemSprite").GetComponent<Image>();
         if (equipUI == null) equipUI = transform.Find("Back/Image/Equip").GetComponent<Image>();
+        itemData = itemdata;
+
         if (itemData)
         {
             itemSprite.enabled = true;
             itemSprite.sprite = itemData.sprite;
-            this.itemData = itemData;
             if (inventory.EquipItem == itemData) setEquipUI(true);
             else if (inventory.EquipItem != itemData && equipUI.gameObject.activeSelf) setEquipUI(false);
         }
@@ -26,7 +27,7 @@ public class ItemSlotUI : MonoBehaviour
         {
             itemSprite.sprite = null;
             itemSprite.enabled = false;
-            this.itemData = null;
+            itemData = null;
         }
     }
 

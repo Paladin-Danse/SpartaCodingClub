@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
+    [field: Header("PlayerInfo")]
     [field: SerializeField] public string playerName { get; private set; }
     [field: SerializeField] public int playerLevel { get; private set; }
     [field: SerializeField] public int playerExp { get; private set; }
     [field: SerializeField] public int playerNextLvExp { get; private set; }
     public string playerDescription;
 
+    [Header("PlayerDefaultStat")]
     [SerializeField] private int defaultAttackPoint;
     public int buffAttackPoint = 0;
     public int attackPoint

@@ -35,4 +35,9 @@ public class InventoryUI : MonoBehaviour
             if (data.itemData == itemdata) data.setEquipUI(true);
         }
     }
+
+    public void UnEquipItem(ItemData itemdata)
+    {
+
+    }
 }

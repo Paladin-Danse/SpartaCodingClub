@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
 {
     [field: SerializeField] public int gold { get; private set; }
     public List<ItemData> inventoryItems { get; private set; } = new List<ItemData>();
+    public ItemSlotUI ItemSlotUI;
     public ItemData EquipItem;
     PlayerStatus status;
 
@@ -15,6 +16,8 @@ public class PlayerInventory : MonoBehaviour
     {
         status = GetComponent<PlayerStatus>();
         GetItem("¹ú¸ñµµ³¢");
+        GetItem("¹ú¸ñµµ³¢");
+        GetItem("Æ°Æ°ÇÑ °©¿Ê");
     }
 
     public void GetItem(string name)
@@ -35,22 +38,55 @@ public class PlayerInventory : MonoBehaviour
     }
     public void Equip(ItemData itemdata)
     {
+        UnEquip();
         EquipItem = itemdata;
-        if (itemdata.atk > 0)
+
+        foreach(ItemDataBuffStat buff in EquipItem.buff)
         {
-            status.buffAttackPoint += itemdata.atk;
+            switch (buff.buffStat)
+            {
+                case ITEM_BUFFTYPE.Attack:
+                    status.buffAttackPoint += buff.buffValue;
+                    break;
+                case ITEM_BUFFTYPE.Defence:
+                    status.buffDefencePoint += buff.buffValue;
+                    break;
+                case ITEM_BUFFTYPE.Health:
+                    status.buffHealthPoint += buff.buffValue;
+                    break;
+                case ITEM_BUFFTYPE.Critical:
+                    status.buffCriticalPoint += buff.buffValue;
+                    break;
+                default:
+                    break;
+            }
         }
-        if (itemdata.crit > 0)
+    }
+    public void UnEquip()
+    {
+        if (EquipItem)
         {
-            status.buffCriticalPoint += itemdata.crit;
-        }
-        if (itemdata.def > 0)
-        {
-            status.buffDefencePoint += itemdata.def;
-        }
-        if (itemdata.hp > 0)
-        {
-            status.buffHealthPoint += itemdata.hp;
+            foreach (ItemDataBuffStat buff in EquipItem.buff)
+            {
+                switch (buff.buffStat)
+                {
+                    case ITEM_BUFFTYPE.Attack:
+                        status.buffAttackPoint -= buff.buffValue;
+                        break;
+                    case ITEM_BUFFTYPE.Defence:
+                        status.buffDefencePoint -= buff.buffValue;
+                        break;
+                    case ITEM_BUFFTYPE.Health:
+                        status.buffHealthPoint -= buff.buffValue;
+                        break;
+                    case ITEM_BUFFTYPE.Critical:
+                        status.buffCriticalPoint -= buff.buffValue;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            EquipItem = null;
         }
     }
 }

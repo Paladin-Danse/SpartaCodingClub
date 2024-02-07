@@ -11,6 +11,7 @@ public class PopupWindow : MonoBehaviour
     TextMeshProUGUI itemName;
     TextMeshProUGUI itemDescription;
     Transform itemEffectDescription;
+    List<BuffStatUI> buffStatList = new List<BuffStatUI>();
     [SerializeField] private GameObject buffedStat;
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private InventoryUI inventoryUI;
@@ -26,6 +27,27 @@ public class PopupWindow : MonoBehaviour
         itemImage.sprite = itemdata.sprite;
         itemName.text = itemdata.name;
         itemDescription.text = itemdata.description;
+
+        if(itemdata.buff.Length > 0)
+        {
+            BuffStatUI buffStatUI;
+
+            foreach (BuffStatUI item in buffStatList)
+                item.gameObject.SetActive(false);
+
+            foreach (ItemDataBuffStat stat in itemdata.buff)
+            {
+                BuffStatUI tempUI = buffStatList.Find(i => i.gameObject.activeSelf == false);
+                if (tempUI == null)
+                    buffStatUI = Instantiate(buffedStat, itemEffectDescription).GetComponent<BuffStatUI>();
+                else buffStatUI = tempUI;
+
+                buffStatUI.SetUI(stat.buffStat, stat.buffValue);
+                buffStatUI.gameObject.SetActive(true);
+
+                buffStatList.Add(buffStatUI);
+            }
+        }
     }
 
     public void EquipItem()

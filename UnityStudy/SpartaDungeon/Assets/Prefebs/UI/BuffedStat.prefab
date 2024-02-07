@@ -145,13 +145,14 @@ GameObject:
   - component: {fileID: 6049079512227776057}
   - component: {fileID: 544454075083147413}
   - component: {fileID: 8881668492482676976}
+  - component: {fileID: 8530262337274322049}
   m_Layer: 5
   m_Name: BuffedStat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6049079512227776057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -212,6 +213,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8530262337274322049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547365616566435474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8711237b310b93b4c9c31f2f06bbe919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  value: 10
 --- !u!1 &2782879343892606626
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d6f92cbd891adf4aa53fc633597e7f7, type: 2}
   m_sharedMaterial: {fileID: -5082126098063447867, guid: 3d6f92cbd891adf4aa53fc633597e7f7, type: 2}

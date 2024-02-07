@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public Transform UI_Buttons;
     public StatusUI statusPanel;
     public InventoryUI InventoryPanel;
-    
+
     private void Awake()
     {
         instance = this;

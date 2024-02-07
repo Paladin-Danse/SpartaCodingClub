@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\UI\GoldUI.cs" />
     <Compile Include="Assets\Scripts\Item\ItemData.cs" />
     <Compile Include="Assets\Scripts\UI\StatusUI.cs" />
+    <Compile Include="Assets\Scripts\UI\BuffStatUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\UI\PopupWindow.cs" />
