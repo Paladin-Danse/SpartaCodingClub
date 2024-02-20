@@ -61,13 +61,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\InputActions\PlayerInputActions.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerComboAttackState.cs" />
+    <Compile Include="Assets\Scripts\Characters\Health.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerInput.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\ScriptableObject\Scripts\EnemySO.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerRunState.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\StateMachine\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\StateMachine\EnemyIdleState.cs" />
     <Compile Include="Assets\ScriptableObject\Scripts\PlayerAirData.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerAirState.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\StateMachine\EnemyAttackState.cs" />
+    <Compile Include="Assets\Scripts\Characters\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\StateMachine\EnemyChasingState.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerBaseState.cs" />
     <Compile Include="Assets\ScriptableObject\Scripts\PlayerSO.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerGroundedState.cs" />
@@ -79,7 +88,10 @@
     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerWalkState.cs" />
     <Compile Include="Assets\ScriptableObject\Scripts\PlayerGroundData.cs" />
     <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\ScriptableObject\Scripts\PlayerAttackData.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerAttackState.cs" />
     <Compile Include="Assets\Scripts\Characters\ForceReceiver.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\StateMachine\EnemyBaseState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Externals\prototype-textures\License.txt" />
