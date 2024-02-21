@@ -60,27 +60,234 @@
     <Analyzer Include="D:\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\UserLutModel.cs" />
+    <Compile Include="Assets\InputActions\PlayerInputActions.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPController.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\GrainModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponAnimationSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\VignetteModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\PatrolSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIController.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\FPCameraZoom.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIFieldOfView.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Pool\Classes\PoolDestroyer.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Controller\Interfaces\IRagdollCallbacks.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\PostProcessingComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIReloadSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\UI\Classes\HUDManager.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\ExplosionProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Input\UInput.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Classes\SwitchWeaponType.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\DecalProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Internal\UnrealFPSInfo.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\IDeathCamera.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponReloadSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\ClimbstepProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Name Convention\TNC.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPHealth.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Interfaces\IInventory.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\DecalProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\PostProcessingProfile.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\FogComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\DeathCamera.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\GrainComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\BloomModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPSimpleClimb.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Interfaces\ISimpleInventory.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPCrouch.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponShootingSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Utility\FiniteStateMachine.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Utility\TerrainTextureDetector.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Utility\UMathf.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\RayBullet.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\HealthRegenirationProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Classes\AdvancedInventory.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\DecalHelper.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Pool\Classes\PoolObjects.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Input\StandaloneController.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FallDamageProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\AudioEvent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPGrab.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\ShakeEvent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\AnimationEventProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\CameraTilt.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\CameraFOVKick.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\ViewCast.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IWeaponID.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\IReSpawnManager.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\FogModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\IPickableItem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Name Convention\LNC.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IWeaponAnimator.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\Grenade.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\ThrowingWeaponSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\DropProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Controller\Interfaces\IController.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IWeaponAttack.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\PostProcessingContext.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\ReSpawnManager.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Classes\SimpleInventory.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\IPlayerController.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Utility\Singleton.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Name Convention\INC.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\UI\Classes\Crosshair.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\FootstepProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\UCurveControlledBob.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Interfaces\IPropertiesGeneric.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\PostProcessingModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\HealthRegenerationSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\EventProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\ISimpleClimb.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIHealth.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\ShakeProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIAttackSystem.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\PickupItemSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IBullet.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Controller\Interfaces\IHealth.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\ULerpControlledBob.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\SystemProcessingType.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+    <Compile Include="Assets\Scripts\ButtonUI\IntroUI\MainGameStartBtn.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IWeaponReloading.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\SpreadProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\AI\Classes\AIAnimatorHandler.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\UI\Interfaces\IHUDCallbacks.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Controller\Classes\InverseKinematics.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\DamageCameraEffect.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Controller\Classes\CharacterRagdollSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\ShakeCamera.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Source\Internal\URuntimeInternal.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponActionState.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Input\InputController.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Utility\SurfaceHelper.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+    <Compile Include="Assets\InputActions\PlayerInputAction.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPCameraLook.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponIdentifier.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\PickableItem.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Interfaces\IAdvancedInventory.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\FootstepProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\SpreadProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\ExplosionProperty.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponMeleeSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Pool\Classes\PoolManager.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Pool\Interfaces\IPoolDestroyer.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Interfaces\IPickupItemSystem.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\SoundProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\WeaponID.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Classes\InventoryGroup.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Inventory\Classes\InventorySlot.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Classes\PhysicsBullet.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Pool\Interfaces\IPoolManager.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Weapon\Interfaces\IGrenade.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\ClimbstepProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Character\Classes\FPSBody.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\DitheringModel.cs" />
+    <Compile Include="Assets\Unreal FPS\Core\Runtime\Properties\Classes\AnimationEventProperties.cs" />
+    <Compile Include="Assets\Unreal FPS\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Unreal FPS\UI\Shader\RealtimeBlur.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\Unreal FPS\Models\Weapons\Ammo\Readme.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Unreal FPS\Models\Weapons\Other\Scope\Materials\Zoom.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\Unreal FPS\Shaders\Stencil Mask.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Unreal FPS\Models\Weapons\Readme.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\ACES.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\FXAA.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Downloads\1nfern0\SubmachineGun\submachinegunshader.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Unreal FPS\UI\UI Sprite\Readme.txt" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Uber Shader.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\Unreal FPS\Shaders\Stencil Object.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Unreal FPS\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Unreal FPS\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -420,6 +627,22 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Tracker.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -922,60 +1145,36 @@
       <HintPath>D:\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    <Reference Include="Unity.Services.Analytics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
@@ -994,12 +1193,132 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Codeless">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPv2URPConverters">
+      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Purchasing.Common">
+      <HintPath>Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Analytics">
+      <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
@@ -1010,28 +1329,36 @@
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -1042,20 +1369,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

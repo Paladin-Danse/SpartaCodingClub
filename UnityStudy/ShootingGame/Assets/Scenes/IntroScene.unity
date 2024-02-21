@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 186382035}
   - component: {fileID: 186382034}
   - component: {fileID: 186382033}
+  - component: {fileID: 186382036}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -391,7 +392,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 186382034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 186382036}
+        m_TargetAssemblyTypeName: MainGameStartBtn, Assembly-CSharp
+        m_MethodName: MainSceneLoad
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &186382034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +443,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186382031}
   m_CullTransparentMesh: 1
+--- !u!114 &186382036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186382031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b154c258a4e316f4faf0ade5568ad14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <sceneName>k__BackingField: MainScene
 --- !u!1 &306139747
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +543,7 @@ GameObject:
   - component: {fileID: 670158644}
   - component: {fileID: 670158643}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,7 +588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBAAC\uAC00... \uBAAC\uAC00 \uC7AC\uBBF8\uC788\uB294 \uAC8C\uC784"
+  m_text: "ShootingRange\n\uC0AC\uACA9\uC7A5 \uAC8C\uC784"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a2809c767cef7849a4c94beff0f78c7, type: 2}
   m_sharedMaterial: {fileID: 3584858868932554, guid: 6a2809c767cef7849a4c94beff0f78c7,
@@ -590,8 +616,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -834,7 +860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC544\uBB34\uD2BC \uC2DC\uC791\uD558\uAE30"
+  m_text: "\uC2DC\uC791\uD558\uAE30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a2809c767cef7849a4c94beff0f78c7, type: 2}
   m_sharedMaterial: {fileID: 3584858868932554, guid: 6a2809c767cef7849a4c94beff0f78c7,
