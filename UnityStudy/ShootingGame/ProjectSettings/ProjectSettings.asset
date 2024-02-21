@@ -832,12 +832,12 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 9e7e66a0-bb32-40ca-8c56-478880b65fbb
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: ShootingGame
   organizationId: dltmdwns1026
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
