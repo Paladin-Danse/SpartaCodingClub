@@ -14,12 +14,16 @@ public class Player : MonoBehaviour
     [field: SerializeField] public float minXLook { get; private set;}
     [field: SerializeField] public float maxXLook { get; private set;}
     public Transform PlayerVCTransform { get; private set; }
+    
+    float curXRot = 0;
 
     void Start()
     {
         Input = GetComponent<PlayerInput>();
         rigidbody = GetComponent<Rigidbody>();
         PlayerVCTransform = transform.Find("PlayerViewCam");
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -39,23 +43,14 @@ public class Player : MonoBehaviour
     private void CameraLook()
     {
         Vector2 LookInput = Input.PlayerActions.Look.ReadValue<Vector2>();
-        Debug.Log(LookInput);
+        //Debug.Log(LookInput);
 
-        float curXRot = 0;
         curXRot += LookInput.y * RotateModifier;
         curXRot = Mathf.Clamp(curXRot, minXLook, maxXLook);
-        PlayerVCTransform.localEulerAngles = new Vector3(-curXRot, 0, 0);//어째선지는 몰라도 처음엔 정상값이 들어갔다가 다시 들어갈 때 0이 들어와 값이 덮어진다.
+        PlayerVCTransform.localEulerAngles = new Vector3(-curXRot, 0, 0);
 
         rigidbody.transform.eulerAngles += new Vector3(0, LookInput.x * RotateModifier, 0);
     }
-    //void CameraLook()
-    //{
-    //    camCurXRot += mouseDelta.y * lookSensitivity;
-    //    camCurXRot = Mathf.Clamp(camCurXRot, minXLook, maxXLook);
-    //    cameraContainer.localEulerAngles = new Vector3(-camCurXRot, 0, 0);
-
-    //    transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0);
-    //}
 
     private Vector3 GetMovementDirection()
     {
