@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     public Transform PlayerVCTransform { get; private set; }
     
     float curXRot = 0;
-
     void Start()
     {
         Input = GetComponent<PlayerInput>();

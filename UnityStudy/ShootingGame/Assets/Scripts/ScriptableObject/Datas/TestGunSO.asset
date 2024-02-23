@@ -19,3 +19,4 @@ MonoBehaviour:
     <Recoil>k__BackingField: 35
     <Distance>k__BackingField: 80
     <FireRate>k__BackingField: 0.124
+    <MaxAmmo>k__BackingField: 30

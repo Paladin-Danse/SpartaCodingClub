@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GunShot : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     [SerializeField] public Transform shotPos { get; private set; }
     public GunSO Data;
+    public int Ammo;
+    public bool IsAmmo { get { return Ammo > 0; } }
     LayerMask layerMask;
-
     ParticleSystem gunShotImpact;
     List<ParticleSystem> particleSystems;
     private void Start()
@@ -17,6 +19,7 @@ public class GunShot : MonoBehaviour
         layerMask = 1 << LayerMask.NameToLayer("Default");
         gunShotImpact = Resources.Load("Prefebs/ParticleEffects/gunShotImpact").GetComponent<ParticleSystem>();
         particleSystems = new List<ParticleSystem>();
+        Ammo = Data.gunData.MaxAmmo;
     }
 
     public void Shot()
@@ -44,7 +47,8 @@ public class GunShot : MonoBehaviour
             hitPoint = Camera.main.ScreenToWorldPoint(aimCenter);
             Debug.Log("No Target");
         }
-
+        Ammo--;
+        UIManager.Instance.playerHUD.UseAmmoUpdate();
         Debug.DrawRay(shotPos.position, hitPoint - shotPos.position);
     }
 
@@ -64,5 +68,10 @@ public class GunShot : MonoBehaviour
         ParticleSystem newImpact = Instantiate(obj.gameObject, hit.point, Quaternion.LookRotation(hit.normal)).GetComponent<ParticleSystem>();
         newImpact.Play();
         particleSystems.Add(newImpact);
+    }
+
+    public void Reload()//¹Ì±¸Çö.
+    {
+
     }
 }
